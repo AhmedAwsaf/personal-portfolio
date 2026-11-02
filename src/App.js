@@ -173,6 +173,97 @@ function App() {
     setActiveMediaType('image');
   };
 
+  // Close any open modals and smoothly scroll to the top
+  const handleBrandClick = () => {
+    if (selectedProject) {
+      setSelectedProject(null);
+    }
+    if (typeof window !== 'undefined') {
+      if (window.location.hash) {
+        window.history.pushState(null, '', window.location.pathname);
+      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  // Standalone Widget Router for GitHub README links (?widget=orbit | game | projects)
+  const [widgetMode] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const p = new URLSearchParams(window.location.search);
+      return p.get('widget');
+    }
+    return null;
+  });
+
+  if (widgetMode === 'orbit') {
+    return (
+      <div className="min-h-screen w-full bg-neutral-950 flex flex-col items-center justify-center p-6 text-white relative overflow-hidden">
+        <div className="absolute top-6 left-6 z-20 flex items-center gap-3">
+          <a
+            href="/"
+            className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-neutral-800 hover:bg-neutral-700 text-neutral-300 border border-neutral-700 transition-colors no-underline flex items-center gap-1.5"
+          >
+            ← Full Portfolio
+          </a>
+          <span className="text-xs text-neutral-500 font-mono">Interactive 3D Orbit Widget</span>
+        </div>
+        <div className="scale-90 sm:scale-100 flex items-center justify-center">
+          <AvatarOrbit3D hideAvatar={true} centerText="AHMED AWSAF" />
+        </div>
+      </div>
+    );
+  }
+
+  if (widgetMode === 'game') {
+    return (
+      <div className="min-h-screen w-full bg-neutral-950 flex flex-col items-center justify-center p-4 text-white relative">
+        <div className="absolute top-4 left-4 z-20 flex items-center gap-3">
+          <a
+            href="/"
+            className="px-3.5 py-1.5 rounded-full text-xs font-semibold bg-neutral-800 hover:bg-neutral-700 text-neutral-300 border border-neutral-700 transition-colors no-underline flex items-center gap-1.5"
+          >
+            ← Exit Game
+          </a>
+          <span className="text-xs text-neutral-500 font-mono">Space Arcade 2D Mini-Game</span>
+        </div>
+        <div className="w-full max-w-4xl max-h-[90vh] flex items-center justify-center">
+          <SpaceShooter />
+        </div>
+      </div>
+    );
+  }
+
+  if (widgetMode === 'projects') {
+    return (
+      <div className="min-h-screen w-full bg-neutral-950 flex flex-col items-center justify-center p-6 text-white">
+        <div className="w-full max-w-3xl space-y-4">
+          <div className="flex items-center justify-between pb-3 border-b border-neutral-800">
+            <span className="text-sm font-pixel text-neutral-300">AHMED AWSAF • PROJECTS SHOWCASE</span>
+            <a href="/" className="text-xs text-cyan-400 hover:underline">Full Website →</a>
+          </div>
+          <div className="space-y-3">
+            {projects.slice(0, 6).map((p) => (
+              <div key={p.id} className="p-4 rounded-2xl bg-neutral-900 border border-neutral-800 flex items-center justify-between gap-4">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <span className="font-bold text-white text-base">{p.title}</span>
+                    <span className="text-[10px] px-2 py-0.5 rounded-md bg-neutral-800 text-cyan-400 font-mono">{p.category}</span>
+                  </div>
+                  <p className="text-xs text-neutral-400 mt-1 line-clamp-1">{p.tagline}</p>
+                </div>
+                {p.links?.github && (
+                  <a href={p.links.github} target="_blank" rel="noreferrer" className="px-3 py-1 rounded-xl text-xs bg-neutral-800 hover:bg-neutral-700 text-neutral-200 border border-neutral-700 flex-shrink-0 no-underline">
+                    GitHub →
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-neutral-50 dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 transition-colors duration-200">
       {/* ========================================================================
@@ -271,7 +362,7 @@ function App() {
           Sits at the bottom of the hero screen and sticks to the top upon scroll
           ======================================================================== */}
       <div ref={sentinelRef} className="h-0 w-full pointer-events-none" />
-      <Navbar isStuck={isStuck} nameProgress={nameProgress} />
+      <Navbar isStuck={isStuck} nameProgress={nameProgress} onBrandClick={handleBrandClick} />
 
       {/* ========================================================================
           3. MAIN SCROLLABLE CONTENT SECTIONS
@@ -571,19 +662,17 @@ function App() {
                     key={cat}
                     type="button"
                     onClick={() => setProjectCategory(cat)}
-                    className={`group inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all duration-200 cursor-pointer ${
-                      isActive
-                        ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 shadow-sm ring-1 ring-neutral-900/10 dark:ring-white/20'
-                        : 'bg-neutral-100/90 dark:bg-neutral-800/80 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-200/70 dark:hover:bg-neutral-700/70 border border-neutral-200/70 dark:border-neutral-700/60'
-                    }`}
+                    className={`group inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all duration-200 cursor-pointer ${isActive
+                      ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 shadow-sm ring-1 ring-neutral-900/10 dark:ring-white/20'
+                      : 'bg-neutral-100/90 dark:bg-neutral-800/80 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-200/70 dark:hover:bg-neutral-700/70 border border-neutral-200/70 dark:border-neutral-700/60'
+                      }`}
                   >
                     <span>{cat}</span>
                     <span
-                      className={`px-1.5 py-0.5 rounded-md text-[10px] font-mono font-semibold transition-colors ${
-                        isActive
-                          ? 'bg-white/20 text-white dark:bg-neutral-950/20 dark:text-neutral-950'
-                          : 'bg-neutral-200/80 dark:bg-neutral-700/70 text-neutral-500 dark:text-neutral-400 group-hover:bg-neutral-300/80 dark:group-hover:bg-neutral-600/80'
-                      }`}
+                      className={`px-1.5 py-0.5 rounded-md text-[10px] font-mono font-semibold transition-colors ${isActive
+                        ? 'bg-white/20 text-white dark:bg-neutral-950/20 dark:text-neutral-950'
+                        : 'bg-neutral-200/80 dark:bg-neutral-700/70 text-neutral-500 dark:text-neutral-400 group-hover:bg-neutral-300/80 dark:group-hover:bg-neutral-600/80'
+                        }`}
                     >
                       {count}
                     </span>
@@ -1474,7 +1563,7 @@ function App() {
         {/* ----------------------------------------------------------------------
             MINI GAME: SPACE SHOOTER INTERLUDE
             ---------------------------------------------------------------------- */}
-        <section id="arcade" className="scroll-mt-24 rounded-[2.5rem] bg-neutral-900/40 dark:bg-neutral-950/60 border border-neutral-800/80 p-6 sm:p-8 shadow-sm space-y-4 relative overflow-hidden">
+        <section id="arcade" className="scroll-mt-24 rounded-[2.5rem] bg-neutral-950/60 border border-neutral-800/80 p-6 sm:p-8 shadow-sm space-y-4 relative overflow-hidden">
           <div className="flex items-center justify-between">
             <div className="space-y-1">
               <Badge label="Arcade" variant="neutral" />

@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="listCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d"/>
+      <stop offset="50%" stop-color="#0b1426"/>
+      <stop offset="100%" stop-color="#060913"/>
+    </linearGradient>
+    <linearGradient id="rowHover1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="dynagoGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Card Canvas -->
+  <rect width="800" height="520" rx="24" fill="url(#listCardBg)"/>
+  <rect width="798" height="518" x="1" y="1" rx="23" fill="none" stroke="#1e293b" stroke-width="1.8"/>
+
+  <!-- Window Header -->
+  <g transform="translate(24, 20)">
+    <circle cx="8" cy="12" r="5" fill="#ef4444"/>
+    <circle cx="24" cy="12" r="5" fill="#f59e0b"/>
+    <circle cx="40" cy="12" r="5" fill="#10b981"/>
+
+    <text x="65" y="16" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#94a3b8">ahmed-awsaf / engineering-showcase.md</text>
+
+    <!-- Right Count Badge -->
+    <rect x="625" y="0" width="125" height="24" rx="12" fill="#0284c7" fill-opacity="0.25" stroke="#38bdf8" stroke-width="1"/>
+    <text x="687" y="15" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8">9 PROJECTS TOTAL</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="24" y1="56" x2="776" y2="56" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- ==================== LIST ITEMS ==================== -->
+  
+  <!-- Row 1: Dynago -->
+  <g transform="translate(24, 72)">
+    <rect width="752" height="74" rx="14" fill="#0f172a" stroke="#0284c7" stroke-width="1.2"/>
+    <!-- Left Accent Strip -->
+    <rect width="4" height="74" rx="2" fill="url(#dynagoGrad)"/>
+
+    <text x="24" y="28" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff">Dynago</text>
+    <text x="96" y="27" font-family="'JetBrains Mono', monospace" font-size="11" fill="#38bdf8">— Dynamic PostgreSQL REST API Engine</text>
+
+    <text x="24" y="52" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">Single-query json_build_object compiler, CDC logical replication, and Wazero Wasm sandboxed plugins.</text>
+
+    <!-- Badges Right -->
+    <g transform="translate(565, 14)">
+      <rect width="72" height="20" rx="6" fill="#0284c7" fill-opacity="0.2"/>
+      <text x="36" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#38bdf8">GO / WASM</text>
+
+      <rect x="80" y="0" width="95" height="20" rx="6" fill="#10b981" fill-opacity="0.2"/>
+      <text x="127" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#34d399">ACTIVE ENGINE</text>
+    </g>
+  </g>
+
+  <!-- Row 2: BossClub -->
+  <g transform="translate(24, 156)">
+    <rect width="752" height="74" rx="14" fill="#080e1a" stroke="#1e293b" stroke-width="1"/>
+    <rect width="4" height="74" rx="2" fill="#7f52ff"/>
+
+    <text x="24" y="28" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff">BossClub</text>
+    <text x="108" y="27" font-family="'JetBrains Mono', monospace" font-size="11" fill="#a78bfa">— Collaborative Android Social Platform</text>
+
+    <text x="24" y="52" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">Enterprise Kanban task coordination built with Kotlin KTX, Jetpack Compose, and MVVM architecture.</text>
+
+    <g transform="translate(565, 14)">
+      <rect width="65" height="20" rx="6" fill="#7f52ff" fill-opacity="0.2"/>
+      <text x="32" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#c4b5fd">KOTLIN</text>
+
+      <rect x="73" y="0" width="102" height="20" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+      <text x="124" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#fbbf24">🥉 RUNNER-UP</text>
+    </g>
+  </g>
+
+  <!-- Row 3: MASROORS PLLC -->
+  <g transform="translate(24, 240)">
+    <rect width="752" height="74" rx="14" fill="#080e1a" stroke="#1e293b" stroke-width="1"/>
+    <rect width="4" height="74" rx="2" fill="#3b82f6"/>
+
+    <text x="24" y="28" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff">MASROORS PLLC</text>
+    <text x="165" y="27" font-family="'JetBrains Mono', monospace" font-size="11" fill="#60a5fa">— Commercial Legal Intake Portal</text>
+
+    <text x="24" y="52" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">Client portal with FastAPI microservices, serverless NeonDB PostgreSQL, and administrative BI tracking.</text>
+
+    <g transform="translate(565, 14)">
+      <rect width="75" height="20" rx="6" fill="#3b82f6" fill-opacity="0.2"/>
+      <text x="37" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#93c5fd">FASTAPI/SQL</text>
+
+      <rect x="83" y="0" width="92" height="20" rx="6" fill="#10b981" fill-opacity="0.2"/>
+      <text x="129" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#34d399">US LIVE PROD</text>
+    </g>
+  </g>
+
+  <!-- Row 4: Barobi Design -->
+  <g transform="translate(24, 324)">
+    <rect width="752" height="74" rx="14" fill="#080e1a" stroke="#1e293b" stroke-width="1"/>
+    <rect width="4" height="74" rx="2" fill="#10b981"/>
+
+    <text x="24" y="28" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff">Barobi Design</text>
+    <text x="145" y="27" font-family="'JetBrains Mono', monospace" font-size="11" fill="#34d399">— Enterprise E-Commerce on Google Cloud</text>
+
+    <text x="24" y="52" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">Sub-100ms catalog search and ACID transactions handling 500+ SKUs deployed on GCP Cloud Run &amp; SQL.</text>
+
+    <g transform="translate(565, 14)">
+      <rect width="75" height="20" rx="6" fill="#10b981" fill-opacity="0.2"/>
+      <text x="37" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#6ee7b7">NEXT / GCP</text>
+
+      <rect x="83" y="0" width="92" height="20" rx="6" fill="#3b82f6" fill-opacity="0.2"/>
+      <text x="129" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#93c5fd">500+ SKUS</text>
+    </g>
+  </g>
+
+  <!-- Row 5: Capstone Thesis Simulation -->
+  <g transform="translate(24, 408)">
+    <rect width="752" height="74" rx="14" fill="#080e1a" stroke="#1e293b" stroke-width="1"/>
+    <rect width="4" height="74" rx="2" fill="#f59e0b"/>
+
+    <text x="24" y="28" font-family="-apple-system, sans-serif" font-size="16" font-weight="800" fill="#ffffff">Traffic Digital Twin</text>
+    <text x="180" y="27" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fbbf24">— Computer Vision &amp; 3D Simulation</text>
+
+    <text x="24" y="52" font-family="-apple-system, sans-serif" font-size="12" fill="#94a3b8">Coupling YOLO v11 with Unity physics for heterogeneous traffic stress testing. Cataloged in BRACU Repository.</text>
+
+    <g transform="translate(565, 14)">
+      <rect width="80" height="20" rx="6" fill="#f59e0b" fill-opacity="0.2"/>
+      <text x="40" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700" fill="#fde68a">YOLO / UNITY</text>
+
+      <rect x="88" y="0" width="87" height="20" rx="6" fill="#a855f7" fill-opacity="0.2"/>
+      <text x="131" y="14" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" fill="#d8b4fe">ARCHIVED</text>
+    </g>
+  </g>
+</svg>

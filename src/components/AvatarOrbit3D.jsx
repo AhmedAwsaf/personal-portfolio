@@ -29,7 +29,7 @@ const ORBIT_ITEMS = [
   },
 ];
 
-export default function AvatarOrbit3D() {
+export default function AvatarOrbit3D({ hideAvatar = false, centerText = "AHMED AWSAF" }) {
   const containerRef = useRef(null);
   const stageRef = useRef(null);
   const avatarRef = useRef(null);
@@ -210,17 +210,27 @@ export default function AvatarOrbit3D() {
           <div className="avatar-3d-rim-back" />
           <div className="avatar-3d-rim" />
 
-          {/* Rounded avatar frame */}
-          <div className="avatar-3d-frame">
-            <img
-              src="/AhmedAwsaf-medium.jpg"
-              alt="Ahmed Awsaf"
-              className="avatar-3d-image"
-              loading="eager"
-            />
-            {/* Glossy 3D glass sheen reflection */}
-            <div className="avatar-3d-sheen" />
-          </div>
+          {/* Rounded avatar frame or Text Core */}
+          {hideAvatar ? (
+            <div className="avatar-3d-frame flex items-center justify-center text-center p-3 bg-neutral-950">
+              <div className="w-full h-full rounded-full bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border border-cyan-500/40 flex flex-col items-center justify-center p-4 shadow-inner">
+                <span className="text-[10px] font-mono font-bold tracking-widest text-cyan-400 uppercase">Engineer</span>
+                <span className="text-sm font-extrabold tracking-wider text-white mt-1 leading-tight">{centerText}</span>
+                <span className="text-[9px] text-neutral-400 font-mono mt-1">Systems &amp; Data</span>
+              </div>
+            </div>
+          ) : (
+            <div className="avatar-3d-frame">
+              <img
+                src="/AhmedAwsaf-medium.jpg"
+                alt="Ahmed Awsaf"
+                className="avatar-3d-image"
+                loading="eager"
+              />
+              {/* Glossy 3D glass sheen reflection */}
+              <div className="avatar-3d-sheen" />
+            </div>
+          )}
         </div>
 
         {/* Orbiting 3D Items */}

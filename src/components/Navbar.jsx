@@ -3,10 +3,20 @@ import { useAppTheme } from '../context/ThemeContext';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { ShipSprite } from './SpaceShooter';
 
-export const Navbar = ({ isStuck = false, nameProgress = 0 }) => {
+export const Navbar = ({ isStuck = false, nameProgress = 0, onBrandClick }) => {
   const { toggleTheme, isDark } = useAppTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('about');
+
+  const handleBrandClick = (e) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    if (onBrandClick) {
+      onBrandClick();
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
   const navLinks = [
     { id: 'about', label: 'About', href: '#about' },
@@ -43,7 +53,8 @@ export const Navbar = ({ isStuck = false, nameProgress = 0 }) => {
         >
           <a
             href="/"
-            className="acrylic-blob rounded-full p-1.5 pr-4 flex items-center gap-2.5 group no-underline text-inherit whitespace-nowrap hover:scale-[1.02] active:scale-95"
+            onClick={handleBrandClick}
+            className="acrylic-blob rounded-full p-1.5 pr-4 flex items-center gap-2.5 group no-underline text-inherit whitespace-nowrap hover:scale-[1.02] active:scale-95 cursor-pointer"
           >
             <div className="w-8 h-8 rounded-full overflow-hidden border border-white/60 dark:border-white/20 shadow-sm group-hover:scale-105 transition-transform duration-200 flex-shrink-0">
               <img
