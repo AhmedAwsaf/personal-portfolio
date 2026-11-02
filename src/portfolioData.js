@@ -10,7 +10,9 @@
  * Images and CV documents are loaded from /content/ (copied from the content folder).
  */
 
-export const portfolioData = {
+import { getAssetUrl } from './utils/assets.js';
+
+const rawPortfolioData = {
   // --------------------------------------------------------------------------
   // 1. PERSONAL & PROFILE INFORMATION
   // --------------------------------------------------------------------------
@@ -718,6 +720,44 @@ export const portfolioData = {
   ],
 };
 
+/**
+ * Recursively normalizes all asset URLs in portfolioData so they load properly in dev and production
+ */
+function normalizeAssetUrls(data) {
+  if (!data) return data;
+  if (typeof data === 'string') {
+    if (
+      data.startsWith('/content/') ||
+      data.startsWith('content/') ||
+      data.startsWith('/Images/') ||
+      data.startsWith('Images/') ||
+      data.endsWith('.pdf') ||
+      data.endsWith('.png') ||
+      data.endsWith('.jpg') ||
+      data.endsWith('.jpeg') ||
+      data.endsWith('.svg') ||
+      data.endsWith('.mp4') ||
+      data.endsWith('.webp')
+    ) {
+      return getAssetUrl(data);
+    }
+    return data;
+  }
+  if (Array.isArray(data)) {
+    return data.map(normalizeAssetUrls);
+  }
+  if (typeof data === 'object') {
+    const res = {};
+    for (const key of Object.keys(data)) {
+      res[key] = normalizeAssetUrls(data[key]);
+    }
+    return res;
+  }
+  return data;
+}
+
+export const portfolioData = normalizeAssetUrls(rawPortfolioData);
+
 // Export individual sections for modular use
 export const personalInfo = portfolioData.personal;
 export const experienceData = portfolioData.experience;
@@ -728,4 +768,5 @@ export const skillsData = portfolioData.skills;
 export const collaboratorsData = portfolioData.collaborators;
 export const projects = portfolioData.projects;
 
+export { getAssetUrl };
 export default portfolioData;

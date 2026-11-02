@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useAppTheme } from '../context/ThemeContext';
 import { Sun, Moon, Menu, X } from 'lucide-react';
 import { ShipSprite } from './SpaceShooter';
+import { getAssetUrl } from '../utils/assets.js';
 
 export const Navbar = ({ isStuck = false, nameProgress = 0, onBrandClick }) => {
   const { toggleTheme, isDark } = useAppTheme();
@@ -58,7 +59,7 @@ export const Navbar = ({ isStuck = false, nameProgress = 0, onBrandClick }) => {
           >
             <div className="w-8 h-8 rounded-full overflow-hidden border border-white/60 dark:border-white/20 shadow-sm group-hover:scale-105 transition-transform duration-200 flex-shrink-0">
               <img
-                src="/AhmedAwsaf-small.jpg"
+                src={getAssetUrl('/AhmedAwsaf-small.jpg')}
                 alt="Ahmed Awsaf"
                 className="w-full h-full object-cover"
               />

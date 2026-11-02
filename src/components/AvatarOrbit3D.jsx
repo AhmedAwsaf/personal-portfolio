@@ -1,30 +1,31 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import './AvatarOrbit3D.css';
+import { getAssetUrl } from '../utils/assets.js';
 
 const ORBIT_ITEMS = [
   {
     name: 'Full-Stack Dev',
-    src: '/Images/3dicons-computer-dynamic-color.png',
+    src: getAssetUrl('/Images/3dicons-computer-dynamic-color.png'),
     alt: 'Computer 3D Icon',
   },
   {
     name: 'Architecture & Docs',
-    src: '/Images/3dicons-file-text-dynamic-color.png',
+    src: getAssetUrl('/Images/3dicons-file-text-dynamic-color.png'),
     alt: 'File Text 3D Icon',
   },
   {
     name: 'Creative Tech',
-    src: '/Images/3dicons-frankenstein-dynamic-color.png',
+    src: getAssetUrl('/Images/3dicons-frankenstein-dynamic-color.png'),
     alt: 'Creative Monster 3D Icon',
   },
   {
     name: 'Logic & Code',
-    src: '/Images/3dicons-hash-dynamic-color.png',
+    src: getAssetUrl('/Images/3dicons-hash-dynamic-color.png'),
     alt: 'Hash Code 3D Icon',
   },
   {
     name: 'Continuous Learning',
-    src: '/Images/NOTEBOOK-3D.png',
+    src: getAssetUrl('/Images/NOTEBOOK-3D.png'),
     alt: 'Notebook 3D Icon',
   },
 ];
@@ -222,7 +223,7 @@ export default function AvatarOrbit3D({ hideAvatar = false, centerText = "AHMED 
           ) : (
             <div className="avatar-3d-frame">
               <img
-                src="/AhmedAwsaf-medium.jpg"
+                src={getAssetUrl('/AhmedAwsaf-medium.jpg')}
                 alt="Ahmed Awsaf"
                 className="avatar-3d-image"
                 loading="eager"
