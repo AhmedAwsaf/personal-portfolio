@@ -9,13 +9,13 @@ Welcome to the comprehensive documentation and content archive of **Ahmed Awsaf*
 | Field | Details |
 | :--- | :--- |
 | **Full Name** | Ahmed Awsaf |
-| **Current Role** | Data Operations Analyst at Augmedix (Commure US) & Full-Stack / Software Engineer |
+| **Current Role** | Operations Analyst, Growth Operations at Commure Bangladesh (Augmedix) & Full-Stack / Software Engineer |
 | **Location** | Niketan, Dhaka, Bangladesh |
 | **Email** | [officialawsaf@gmail.com](mailto:officialawsaf@gmail.com) |
 | **Phone** | [+8801632663362](tel:+8801632663362) |
 | **GitHub** | [github.com/AhmedAwsaf](https://github.com/AhmedAwsaf) |
 | **LinkedIn** | [linkedin.com/in/awsaf-ahmed](https://www.linkedin.com/in/awsaf-ahmed/) |
-| **Curriculum Vitae** | [Ahmed_Awsaf_CV.pdf](./cv/Ahmed_Awsaf_CV.pdf) |
+| **Curriculum Vitae** | [CV___Remote.pdf](./cv/CV___Remote.pdf) |
 
 > *"Software Engineer and Data Analyst with around 4 years of experience building production-grade APIs, data pipelines, and automated workflows. Proficient in Python and experienced applying it to AI quality assessment in a US health-tech environment, with a strong foundation in FastAPI, PostgreSQL, and cloud deployment. Driven to use technology for social good, eager to contribute to mission-led platforms that improve outcomes for vulnerable communities."*
 
@@ -34,9 +34,9 @@ content/
 ├── skills-and-techstack.md        # Technical capabilities, frameworks, tools & databases
 ├── awards-and-honors.md           # Hackathon victories, academic honors & batch awards
 ├── collaborators.md               # Collaborators, project teammates & contact links
-├── Ahmed_Awsaf_CV.pdf             # PDF copy of Curriculum Vitae
+├── CV___Remote.pdf             # PDF copy of Curriculum Vitae
 ├── cv/
-│   └── Ahmed_Awsaf_CV.pdf         # Standalone CV archive
+│   └── CV___Remote.pdf         # Standalone CV archive
 ├── projects/                      # Individual documentation for all projects
 │   ├── README.md                  # Complete projects catalog & summary table
 │   ├── bossclub.md                # BossClub (IntraHacktive 1.0 Runner-up Android App)
@@ -51,6 +51,7 @@ content/
     ├── profile/                   # Portrait and avatar images
     ├── research/                  # Research figures & simulation architecture
     └── projects/                  # Categorized media per project
+        ├── BarobiDesign/          # 5 screenshots and logo
         ├── BossClub/              # 9 screenshots, logo, and MP4 demo
         ├── CookBOOK/              # 5 screenshots and logo
         ├── DX-BALL/               # 2 OpenGL game screenshots

@@ -6,7 +6,7 @@
 
 I am a **Software Engineer** and **Data Analyst** with around 4 years of experience building production-grade APIs, high-throughput data pipelines, and automated workflow solutions. Combining a solid computer science background with hands-on expertise in artificial intelligence, backend web systems, and data analytics, I specialize in translating complex real-world challenges into reliable, high-performance software.
 
-Currently, I serve as a **Data Operations Analyst** at **Augmedix (Commure US)** in Dhaka, where I focus on quality assessment pipelines for clinical AI notes, discrepancies analysis between AI generation and physician documentation, and automated audit scalability.
+Currently, I serve as an **Operations Analyst, Growth Operations** at **Commure Bangladesh (Augmedix)** in Dhaka, contributing to revenue benchmarking operations, automated reporting workflows, and clinical AI quality control.
 
 ---
 
@@ -26,7 +26,7 @@ Currently, I serve as a **Data Operations Analyst** at **Augmedix (Commure US)**
 - **Location:** Niketan, Dhaka, Bangladesh
 - **LinkedIn:** [linkedin.com/in/awsaf-ahmed/](https://www.linkedin.com/in/awsaf-ahmed/)
 - **GitHub:** [github.com/AhmedAwsaf](https://github.com/AhmedAwsaf)
-- **CV Download:** [Download PDF Version](./cv/Ahmed_Awsaf_CV.pdf)
+- **CV Download:** [Download PDF Version](./cv/CV___Remote.pdf)
 
 ---
 

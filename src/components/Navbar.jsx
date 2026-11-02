@@ -11,6 +11,8 @@ export const Navbar = ({ isStuck = false, nameProgress = 0 }) => {
     { id: 'about', label: 'About', href: '#about' },
     { id: 'experience', label: 'Experience', href: '#experience' },
     { id: 'projects', label: 'Projects', href: '#projects' },
+    { id: 'research', label: 'Research', href: '#research' },
+    { id: 'education', label: 'Education', href: '#education' },
     { id: 'skills', label: 'Skills', href: '#skills' },
     { id: 'contact', label: 'Contact', href: '#contact' },
   ];

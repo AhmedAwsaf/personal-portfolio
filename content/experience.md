@@ -4,21 +4,23 @@ Ahmed Awsaf brings approximately 4 years of hands-on experience in software engi
 
 ---
 
-## 1. Augmedix (Commure US)
+## 1. Commure Bangladesh (Augmedix)
 
 | Detail | Information |
 | :--- | :--- |
-| **Role** | Data Operations Analyst |
+| **Role** | Operations Analyst, Growth Operations |
 | **Duration** | January 2026 – Present |
-| **Location** | Tejgaon, Dhaka, Bangladesh |
-| **Domain** | Healthcare AI & Ambient Clinical Intelligence |
-| **Core Technologies** | Python, SQL, Workflow Orchestration, Data Analytics, Clinical QA Pipelines |
+| **Location** | Tejgaon, Dhaka |
+| **Domain** | Healthcare AI & Revenue Benchmarking Operations |
+| **Core Technologies** | Python, SQL, Selenium, JavaScript, OpenAI APIs, Workflow Automation, Benchmarking Dashboards |
 
 ### Overview & Responsibilities
-Augmedix (a Commure company) converts natural clinician-patient conversations into structured medical notes in real time. In the role of Data Operations Analyst:
-- **Pipeline Automation:** Automated AI note quality assessment pipelines utilizing Python, SQL, and modern workflow orchestration tooling, reducing manual review time by an estimated **40%** and drastically scaling audit capabilities.
-- **AI vs. Physician Comparative Analysis:** Conducted rigorous comparative analyses between ambient AI-generated notes and physician-signed clinical notes to detect nuanced discrepancies, omissions, and hallucinations, ensuring patient records maintain high-fidelity medical standards.
-- **Continuous Feedback Loops:** Architected data-driven validation feedback loops directly linking operational audit data back into prompt engineering and model fine-tuning workflows, ensuring compliance with strict healthcare requirements (HIPAA and clinical guidelines).
+- Actively contributed to revenue benchmarking operations, supporting data analysis, benchmarking activities, and reporting processes.
+- Developed automated reporting workflows and dashboards to support revenue benchmarking operations, streamlining data processing and reporting activities.
+- Leveraged Python, SQL, and Selenium to automate repetitive operational tasks and improve reporting efficiency.
+- Designed and developed automated AI quality-control workflows using Python, JavaScript, SQL, and OpenAI APIs to evaluate AI-generated clinical documentation.
+- Established automated evaluation frameworks and quality metrics to identify inconsistencies in AI-generated clinical notes.
+- Replaced manual clinical documentation review processes with automated quality-control workflows, reducing QA workload by **30%**.
 
 ---
 

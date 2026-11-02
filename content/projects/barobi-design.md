@@ -1,5 +1,7 @@
 # Barobi Design — Full-Stack E-Commerce & Inventory Management Platform
 
+![Barobi Design Logo](../images/projects/BarobiDesign/logo.svg)
+
 ## 📌 Project Overview
 
 **Barobi Design** is an enterprise-grade, full-stack digital commerce and inventory management platform built to power a high-traffic live consumer storefront. Engineered to handle large catalog variations (over 500+ distinct SKUs) with concurrent cart checkouts, the system couples a blazing-fast server-rendered Next.js front-end with an optimized PostgreSQL transactional back-end deployed entirely on **Google Cloud Platform (GCP)**.
@@ -31,3 +33,17 @@
 2. **Transactional Integrity & Concurrency:** Implemented ACID-compliant inventory reservation transactions to prevent overselling during flash promotions and peak checkout events.
 3. **Automated Order Processing:** Real-time administrative portal enabling the warehouse and fulfillment staff to update order statuses, generate shipping invoices, and restock low-inventory items.
 4. **Cloud-Native Scalability on GCP:** Leveraged GCP's elastic infrastructure and managed container runtimes to maintain zero downtime and low latency.
+
+---
+
+## 📸 Media & Screenshots
+
+### Interface Highlights
+
+| Screen 1: Storefront Landing | Screen 2: Catalog & Categories | Screen 3: Product Detail |
+| :---: | :---: | :---: |
+| ![Storefront Landing](../images/projects/BarobiDesign/1.jpg) | ![Catalog & Categories](../images/projects/BarobiDesign/2.png) | ![Product Detail](../images/projects/BarobiDesign/3.png) |
+
+| Screen 4: Cart & Checkout | Screen 5: Orders & Admin |
+| :---: | :---: |
+| ![Cart & Checkout](../images/projects/BarobiDesign/4.png) | ![Orders & Admin](../images/projects/BarobiDesign/5.png) |

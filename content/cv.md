@@ -1,6 +1,6 @@
 # Curriculum Vitae — Ahmed Awsaf
 
-**PDF Document:** [Download / View PDF](./cv/Ahmed_Awsaf_CV.pdf)
+**PDF Document:** [Download / View PDF](./cv/CV___Remote.pdf)
 
 ---
 
@@ -16,11 +16,14 @@ Software Engineer and Data Analyst with around 4 years of experience building pr
 
 ### **EXPERIENCE**
 
-#### **Augmedix (Commure US)** | *Tejgaon, Dhaka*
-**Data Operations Analyst** | *Jan 2026 – Present*
-- Automated AI note quality assessment pipelines using Python, SQL, and workflow orchestration tools, reducing manual review time by an estimated **40%** and improving audit scalability.
-- Conducted comparative analysis between AI-generated notes and physician-signed notes to identify discrepancies and ensure high-fidelity clinical documentation.
-- Developed data-driven feedback loops through workflows to validate AI output quality, ensuring outputs met stringent clinical standards and compliance requirements.
+#### **Commure Bangladesh (Augmedix)** | *Tejgaon, Dhaka*
+**Operations Analyst, Growth Operations** | *Jan 2026 – Present*
+- Actively contributed to revenue benchmarking operations, supporting data analysis, benchmarking activities, and reporting processes.
+- Developed automated reporting workflows and dashboards to support revenue benchmarking operations, streamlining data processing and reporting activities.
+- Leveraged Python, SQL, and Selenium to automate repetitive operational tasks and improve reporting efficiency.
+- Designed and developed automated AI quality-control workflows using Python, JavaScript, SQL, and OpenAI APIs to evaluate AI-generated clinical documentation.
+- Established automated evaluation frameworks and quality metrics to identify inconsistencies in AI-generated clinical notes.
+- Replaced manual clinical documentation review processes with automated quality-control workflows, reducing QA workload by **30%**.
 
 #### **Masroors PLLC** | *Chandler, AZ (Remote)*
 **Full-Stack Developer (Remote)** | *Jul 2023 – Nov 2025*
