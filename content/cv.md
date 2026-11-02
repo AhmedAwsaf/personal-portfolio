@@ -42,6 +42,11 @@ Software Engineer and Data Analyst with around 4 years of experience building pr
 
 ### **PROJECTS**
 
+#### **Dynago** | *Go (Golang), PostgreSQL, Redis, Wazero (Wasm), Docker* | [GitHub Repository](https://github.com/dynago/dynago)
+- Engineered a dynamic PostgreSQL REST API engine compiling HTTP requests directly to single-query JSON with `json_build_object` and zero ORM overhead.
+- Built-in PostgreSQL Write-Ahead Log (WAL) logical replication consumer for deterministic cache eviction and real-time Server-Sent Events (SSE).
+- Implemented in-process polyglot WebAssembly (Wazero) sandboxed plugin system with outbound host HTTP capabilities, in-browser SQL runner, and table-level RBAC.
+
 #### **Barobi Design** | *Next.js, PostgreSQL, Express.js, GCP* | [barobidesign.com.bd](https://barobidesign.com.bd)
 - Built a full-stack e-commerce and inventory management platform with RESTful APIs and optimized PostgreSQL schemas, handling 500+ SKUs and concurrent transactions across a live storefront.
 - Integrated third-party payment, authentication, and cloud services and deployed to Google Cloud Platform.
@@ -62,11 +67,11 @@ Software Engineer and Data Analyst with around 4 years of experience building pr
 
 ### **SKILLS**
 
-- **Languages:** Python, SQL, JavaScript, Kotlin, C#
+- **Languages:** Python, Go, SQL, JavaScript, Kotlin, C#
 - **Python Frameworks & Libraries:** FastAPI, Django, Playwright, BeautifulSoup, Selenium
-- **Databases:** PostgreSQL, MySQL, MongoDB, NeonDB
-- **Stack & Web:** REST APIs, Next.js, React, Express.js
-- **Tools & Infrastructure:** Git, GCP, Docker, Linux
+- **Databases & Caching:** PostgreSQL, Redis, MySQL, MongoDB, NeonDB
+- **Stack & Systems:** Dynago Engine, REST APIs, WebAssembly (Wazero), Next.js, React, Express.js
+- **Tools & Infrastructure:** Git, GCP, Docker, Docker Compose, Linux
 
 ---
 

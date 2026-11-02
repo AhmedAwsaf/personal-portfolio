@@ -10,6 +10,7 @@ A detailed breakdown of Ahmed Awsaf's programming languages, frameworks, develop
 | Language | Proficiency | Key Use Cases |
 | :--- | :--- | :--- |
 | **Python** | Expert | Backend APIs (FastAPI, Django), Data Operations, AI Testing, Web Scraping (Playwright, BeautifulSoup, Selenium), OpenGL |
+| **Go (Golang)** | Advanced | High-concurrency systems, Dynago REST API compiler engine, Wazero WebAssembly runtime, Docker microservices |
 | **SQL** | Advanced | Complex analytical queries, relational schema design, performance tuning, data pipeline validation |
 | **JavaScript (ES6+)** | Advanced | Full-stack web development, Node.js servers, interactive browser DOM applications |
 | **TypeScript** | Advanced | Type-safe React & Next.js web application architecture |
@@ -20,7 +21,9 @@ A detailed breakdown of Ahmed Awsaf's programming languages, frameworks, develop
 
 ---
 
-### 2. Web & Backend Frameworks
+### 2. Web, Backend Frameworks & Runtimes
+- **Dynago Engine:** High-performance dynamic PostgreSQL REST API compiler engine written in Go with single-query JSON compilation.
+- **Wazero (WebAssembly):** Zero-CGO pure Go WebAssembly runtime for sandboxed pre/post mutation hooks and custom virtual routes.
 - **FastAPI:** High-performance asynchronous microservices, OpenAPI auto-documentation, JWT authentication.
 - **Next.js & React:** Modern full-stack SSR/SSG apps, server actions, component modularity, client-side caching.
 - **Node.js & Express.js:** RESTful API servers, middleware pipelines, e-commerce backend services.
@@ -30,8 +33,9 @@ A detailed breakdown of Ahmed Awsaf's programming languages, frameworks, develop
 
 ---
 
-### 3. Databases & Data Storage
-- **PostgreSQL / NeonDB:** Production-grade relational schemas, connection pooling, complex joins, serverless cloud databases.
+### 3. Databases, Caching & Data Storage
+- **PostgreSQL / NeonDB:** Production-grade relational schemas, logical replication (CDC), json_build_object aggregation, connection pooling.
+- **Redis:** In-memory caching, TTL keys, pub/sub invalidation, high-speed key-value store.
 - **MySQL:** Optimized transactional schemas, local network databases, query optimization.
 - **MongoDB:** NoSQL document store, dynamic schemaless JSON data modeling for rapid prototyping.
 - **Firebase / Firestore:** Real-time synchronization, serverless authentication, client-side databases.

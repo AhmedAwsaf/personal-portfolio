@@ -1,8 +1,8 @@
 .avatar-orbit-container {
   position: relative;
   width: 100%;
-  max-width: 540px;
-  height: 480px;
+  max-width: 480px;
+  height: 380px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,8 +13,8 @@
 
 @media (max-width: 640px) {
   .avatar-orbit-container {
-    max-width: 360px;
-    height: 380px;
+    max-width: 320px;
+    height: 300px;
   }
 }
 
@@ -40,8 +40,8 @@
 }
 
 .avatar-orbit-ring--primary {
-  width: 320px;
-  height: 320px;
+  width: 280px;
+  height: 280px;
   border: 1.5px dashed rgba(99, 102, 241, 0.5);
   box-shadow: 0 0 18px rgba(99, 102, 241, 0.25), inset 0 0 18px rgba(99, 102, 241, 0.15);
   animation: ring-pulse 6s ease-in-out infinite alternate;
@@ -49,8 +49,8 @@
 
 @media (max-width: 640px) {
   .avatar-orbit-ring--primary {
-    width: 235px;
-    height: 235px;
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -70,8 +70,8 @@
 .avatar-3d-wrapper {
   position: relative;
   z-index: 15;
-  width: 270px;
-  height: 270px;
+  width: 230px;
+  height: 230px;
   border-radius: 50%;
   cursor: pointer;
   transform-style: preserve-3d;
@@ -80,8 +80,8 @@
 
 @media (max-width: 640px) {
   .avatar-3d-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
   }
 }
 

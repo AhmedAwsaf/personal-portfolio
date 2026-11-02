@@ -8,6 +8,7 @@ A showcase of software engineering, artificial intelligence, game development, a
 
 | Project | Category / Platform | Primary Tech Stack | Recognition / Status | Links |
 | :--- | :--- | :--- | :--- | :--- |
+| **[Dynago](./dynago.md)** | Backend & Systems | Go, PostgreSQL, Redis, Wazero (Wasm), Docker | High-Performance Engine | [GitHub](https://github.com/dynago/dynago) |
 | **[BossClub](./bossclub.md)** | Android Mobile App | Kotlin KTX, Jetpack Compose | 🥉 **Second Runner-Up** at IntraHacktive 1.0 | [GitHub](https://github.com/AhmedAwsaf/BossClub_IntraHacktive_T13) |
 | **[MASROORS PLLC](./masroors-pllc.md)** | Full-Stack Web Platform | Next.js, FastAPI, PostgreSQL, NeonDB, Tailwind | Production Client System | [Website](https://www.masroors.com/) |
 | **[MortGame](./mortgame.md)** | Android Mobile Game | Unity, C#, Android SDK | Released Game Prototype | [GitHub](https://github.com/AhmedAwsaf/MortGAME) |
@@ -20,6 +21,9 @@ A showcase of software engineering, artificial intelligence, game development, a
 ---
 
 ## 🗂️ Project Categorization
+
+### ⚡ Backend, Database Engines & Distributed Systems
+- **Dynago:** Dynamic PostgreSQL REST API engine compiling HTTP requests directly to single-query JSON with zero ORM boilerplate, embedded Wazero WebAssembly plugins, PostgreSQL WAL logical replication (CDC), and Server-Sent Events (SSE).
 
 ### 📱 Mobile & Android Development
 - **BossClub:** Built using modern Kotlin and Jetpack Compose for enterprise collaboration.

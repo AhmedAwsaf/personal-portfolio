@@ -10,7 +10,7 @@ A directory of talented peers, engineers, and researchers who have collaborated 
 - **ID:** `awsaf`
 - **LinkedIn:** [linkedin.com/in/awsaf-ahmed](https://www.linkedin.com/in/awsaf-ahmed)
 - **GitHub:** [github.com/AhmedAwsaf](https://github.com/AhmedAwsaf)
-- **Projects:** BossClub, MASROORS PLLC, MortGame, CookBook, Fitness Matrix, MusicPill, Barobi Design, DX Ball Game, Thesis Simulation.
+- **Projects:** Dynago, BossClub, MASROORS PLLC, MortGame, CookBook, Fitness Matrix, MusicPill, Barobi Design, DX Ball Game, Thesis Simulation.
 
 ---
 

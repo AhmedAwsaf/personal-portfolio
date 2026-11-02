@@ -40,9 +40,9 @@ export const portfolioData = {
 
     stats: [
       { label: "Years Experience", value: "4+" },
-      { label: "Production Projects", value: "8+" },
-      { label: "B.Sc. CGPA (Highest Distinction)", value: "3.87" },
-      { label: "", value: "" },
+      { label: "Production Projects", value: "9+" },
+      { label: "B.Sc. CGPA", value: "3.87" },
+      { label: "Agnostic", value: "Language" },
     ],
 
     philosophy: [
@@ -318,6 +318,7 @@ export const portfolioData = {
   skills: {
     languages: [
       { name: "Python", level: "Expert", useCase: "FastAPI, Django, Data Ops, Scraping, AI Testing, OpenGL" },
+      { name: "Go (Golang)", level: "Advanced", useCase: "High-performance systems, Dynago REST engine, Wazero runtime, concurrency" },
       { name: "SQL", level: "Advanced", useCase: "PostgreSQL, MySQL, analytical queries, performance tuning" },
       { name: "JavaScript (ES6+)", level: "Advanced", useCase: "React, Node.js, Express, interactive UI & DOM" },
       { name: "TypeScript", level: "Advanced", useCase: "Type-safe React & Next.js web application architecture" },
@@ -327,6 +328,8 @@ export const portfolioData = {
       { name: "C++ / C", level: "Intermediate", useCase: "Data structures, memory management, algorithms" },
     ],
     frameworks: [
+      { name: "Dynago Engine", category: "Backend" },
+      { name: "Wazero (Wasm)", category: "Runtime" },
       { name: "FastAPI", category: "Backend" },
       { name: "Next.js", category: "Full-Stack" },
       { name: "React 19", category: "Frontend" },
@@ -339,7 +342,8 @@ export const portfolioData = {
       { name: "OpenGL", category: "Graphics" },
     ],
     databases: [
-      { name: "PostgreSQL", desc: "Production-grade schemas, connection pooling, complex joins" },
+      { name: "PostgreSQL", desc: "Production-grade schemas, logical replication (CDC), json_build_object aggregation, connection pooling" },
+      { name: "Redis", desc: "In-memory caching, TTL keys, pub/sub invalidation, high-throughput caching" },
       { name: "NeonDB", desc: "Serverless Postgres with instant branching & autoscaling" },
       { name: "MySQL", desc: "Transactional schemas, local network databases, query optimization" },
       { name: "MongoDB", desc: "NoSQL document store, dynamic schemaless JSON data modeling" },
@@ -347,7 +351,8 @@ export const portfolioData = {
     ],
     toolsAndDevOps: [
       "Google Cloud Platform (GCP)",
-      "Docker",
+      "Docker & Docker Compose",
+      "WebAssembly (Wazero)",
       "Git & GitHub",
       "Linux (Ubuntu/Debian)",
       "Playwright & Selenium",
@@ -401,9 +406,10 @@ export const portfolioData = {
   ],
 
   // --------------------------------------------------------------------------
-  // 8. COMPLETE PROJECTS CATALOG (ALL 8 PROJECTS)
+  // 8. COMPLETE PROJECTS CATALOG (ALL 9 PROJECTS)
   // --------------------------------------------------------------------------
   projects: [
+
     {
       id: "bossclub",
       title: "BossClub",
@@ -607,6 +613,49 @@ export const portfolioData = {
       links: {
         demo: "https://fitnessmatrix.vercel.app/",
         github: "https://github.com/AhmedAwsaf/Fitness_Matrix",
+      },
+    }, {
+      id: "dynago",
+      title: "Dynago",
+      tagline: "Dynamic PostgreSQL REST API Engine compiling HTTP requests directly to single-query JSON with zero ORM boilerplate.",
+      category: "Backend & Systems",
+      year: "2024 – 2026",
+      status: "Active Open-Source Engine",
+      recognition: "⚡ High-Performance Go & WebAssembly Engine",
+      image: "/content/images/projects/Dynago/1.svg",
+      logo: "/content/images/projects/Dynago/LOGO.svg",
+      gallery: [
+        "/content/images/projects/Dynago/1.svg",
+        "/content/images/projects/Dynago/2.svg",
+        "/content/images/projects/Dynago/3.svg",
+        "/content/images/projects/Dynago/4.svg",
+        "/content/images/projects/Dynago/5.svg",
+        "/content/images/projects/Dynago/6.svg",
+      ],
+      description:
+        "Dynago is a high-performance, dynamic PostgreSQL REST API engine written in Go. It connects to any PostgreSQL database and instantly exposes fully dynamic, cached REST endpoints for every table with zero ORM, zero code generation, and zero boilerplate. Dynago introspects the database schema at startup, builds an in-memory graph of tables, columns, primary keys, and foreign keys, then compiles HTTP requests directly into optimized json_build_object SQL queries—streaming raw JSON bytes straight from PostgreSQL without unmarshaling overhead.",
+      highlights: [
+        "Single-Query JSON Compilation: Resolves nested relational queries in a single SQL query via json_build_object and json_agg, eliminating N+1 database roundtrips.",
+        "Change Data Capture (CDC): PostgreSQL logical replication tap (WAL test_decoding) for deterministic cache invalidation and real-time Server-Sent Events (SSE).",
+        "Polyglot WebAssembly (Wazero) Plugins: Sandboxed pre/post mutation hooks and custom virtual routes with sub-millisecond cold starts and host outbound HTTP capabilities.",
+        "Zero-Dependency Embedded Web UI Dashboard: Interactive table catalog, dynamic payload generator, in-browser SQL query runner with CSV export, and Data Explorer.",
+        "Production-Grade Security: JWT authentication, table-level Role-Based Access Control (RBAC), and granular Public/Private table visibility controls.",
+      ],
+      techStack: [
+        "Go (Golang)",
+        "PostgreSQL",
+        "Redis",
+        "WebAssembly (Wazero)",
+        "Docker",
+        "Docker Compose",
+        "Server-Sent Events (SSE)",
+        "JWT / RBAC",
+        "Logical Replication (CDC)",
+        "REST API Compiler"
+      ],
+      collaborators: ["Ahmed Awsaf (Author & Lead Systems Architect)"],
+      links: {
+        github: "https://github.com/dynago/dynago",
       },
     },
     {

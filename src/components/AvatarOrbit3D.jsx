@@ -142,8 +142,8 @@ export default function AvatarOrbit3D() {
 
       // Compute Responsive Radii
       const isMobile = window.innerWidth < 640;
-      const radiusX = isMobile ? 155 : 220;
-      const radiusY = isMobile ? 55 : 78;
+      const radiusX = isMobile ? 130 : 185;
+      const radiusY = isMobile ? 46 : 65;
 
       const totalItems = ORBIT_ITEMS.length;
       const step = (Math.PI * 2) / totalItems;

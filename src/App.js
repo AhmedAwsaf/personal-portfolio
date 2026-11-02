@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import GradientASCII from './components/GradientASCII';
 import AvatarOrbit3D from './components/AvatarOrbit3D';
 import LogoLoop from './components/LogoLoop';
+import SpaceShooter from './components/SpaceShooter';
 import {
   SiReact,
   SiNextdotjs,
@@ -22,6 +23,9 @@ import {
   SiOpengl,
   SiGooglecloud,
   SiLinux,
+  SiGo,
+  SiRedis,
+  SiWebassembly,
 } from 'react-icons/si';
 import {
   personalInfo,
@@ -62,19 +66,22 @@ import {
 
 // Tech logos for the infinite LogoLoop ticker
 const techLogos = [
+  { node: <SiGo />, title: 'Go (Golang)', href: 'https://go.dev', hoverColor: '#00add8' },
   { node: <SiPython />, title: 'Python', href: 'https://www.python.org', hoverColor: '#3776ab' },
-  { node: <SiFastapi />, title: 'FastAPI', href: 'https://fastapi.tiangolo.com', hoverColor: '#05998b' },
   { node: <SiPostgresql />, title: 'PostgreSQL', href: 'https://www.postgresql.org', hoverColor: '#4169e1' },
+  { node: <SiRedis />, title: 'Redis', href: 'https://redis.io', hoverColor: '#dc382d' },
+  { node: <SiWebassembly />, title: 'WebAssembly', href: 'https://webassembly.org', hoverColor: '#654ff0' },
+  { node: <SiFastapi />, title: 'FastAPI', href: 'https://fastapi.tiangolo.com', hoverColor: '#05998b' },
   { node: <SiReact />, title: 'React 19', href: 'https://react.dev', hoverColor: '#61dafb' },
   { node: <SiNextdotjs />, title: 'Next.js', href: 'https://nextjs.org', hoverColor: '#60a5fa' },
   { node: <SiTypescript />, title: 'TypeScript', href: 'https://www.typescriptlang.org', hoverColor: '#3178c6' },
   { node: <SiJavascript />, title: 'JavaScript', href: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript', hoverColor: '#f7df1e' },
   { node: <SiTailwindcss />, title: 'Tailwind CSS', href: 'https://tailwindcss.com', hoverColor: '#38bdf8' },
+  { node: <SiDocker />, title: 'Docker', href: 'https://www.docker.com', hoverColor: '#2496ed' },
   { node: <SiKotlin />, title: 'Kotlin', href: 'https://kotlinlang.org', hoverColor: '#7f52ff' },
   { node: <SiUnity />, title: 'Unity Engine', href: 'https://unity.com', hoverColor: '#ffffff' },
   { node: <SiDjango />, title: 'Django', href: 'https://www.djangoproject.com', hoverColor: '#092e20' },
   { node: <SiMongodb />, title: 'MongoDB', href: 'https://www.mongodb.com', hoverColor: '#47a248' },
-  { node: <SiDocker />, title: 'Docker', href: 'https://www.docker.com', hoverColor: '#2496ed' },
   { node: <SiGooglecloud />, title: 'GCP', href: 'https://cloud.google.com', hoverColor: '#4285f4' },
   { node: <SiGit />, title: 'Git', href: 'https://git-scm.com', hoverColor: '#f05032' },
   { node: <SiLinux />, title: 'Linux', href: 'https://www.kernel.org', hoverColor: '#fcc624' },
@@ -124,7 +131,7 @@ function App() {
       ? projects
       : projects.filter((p) => p.category === projectCategory);
 
-  const categories = ['All', 'Full-Stack & Web', 'Mobile & Android', 'Graphics & Game Dev'];
+  const categories = ['All', 'Backend & Systems', 'Full-Stack & Web', 'Mobile & Android', 'Graphics & Game Dev'];
 
   // Sentinel scroll tracking for navbar
   useEffect(() => {
@@ -172,7 +179,7 @@ function App() {
           1. HERO VIEWPORT
           Fills viewport height with Gradient ASCII interactive canvas and 3D Avatar
           ======================================================================== */}
-      <section className="min-h-[calc(100vh-5rem)] relative flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-12 overflow-hidden">
+      <section className="min-h-[calc(100vh-8rem)] relative flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8 py-8 overflow-hidden">
         {/* Background Gradient ASCII canvas effect */}
         <div className="absolute inset-0 z-0 pointer-events-auto opacity-35 dark:opacity-55">
           <GradientASCII
@@ -207,7 +214,7 @@ function App() {
           </p> */}
 
           {/* Action CTAs */}
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+          {/* <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
             <a
               href={personalInfo.cvUrl}
               download="CV___Remote.pdf"
@@ -238,7 +245,7 @@ function App() {
                 iconStart={<Mail className="w-4 h-4" />}
               />
             </a>
-          </div>
+          </div> */}
 
           {/* Quick Metrics Bar */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6 pt-4 w-full max-w-2xl">
@@ -424,6 +431,8 @@ function App() {
           </div>
         </section>
 
+
+
         {/* ----------------------------------------------------------------------
             SECTION 2: WORK EXPERIENCE
             ---------------------------------------------------------------------- */}
@@ -531,44 +540,56 @@ function App() {
         </section>
 
         {/* ----------------------------------------------------------------------
-            SECTION 3: COMPLETE PROJECTS SHOWCASE (ALL 8 PROJECTS)
+            SECTION 3: COMPLETE PROJECTS SHOWCASE (ALL 9 PROJECTS)
             ---------------------------------------------------------------------- */}
         <section
           id="projects"
           className="scroll-mt-24 rounded-[2.5rem] bg-gradient-to-b from-white via-neutral-50/80 to-neutral-100/90 dark:from-neutral-900 dark:via-neutral-900/90 dark:to-neutral-950 border border-neutral-200/80 dark:border-neutral-800/80 p-6 sm:p-10 lg:p-12 shadow-sm space-y-8 relative overflow-hidden"
         >
           {/* Header */}
-          <div className="space-y-4 border-b border-neutral-200/60 dark:border-neutral-800/60 pb-6">
-            <div className="flex items-center gap-2">
-              <Badge label="Projects Catalog" variant="neutral" />
-              <Badge label="8 Completed" variant="info" />
-            </div>
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <h2 className="text-3xl sm:text-4xl font-pixel tracking-wide">
-                  Featured Works & Engineering
-                </h2>
-                <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
-                  Click any project card to inspect screenshots, video demos, and full technical architecture.
-                </p>
+          <div className="space-y-6 border-b border-neutral-200/60 dark:border-neutral-800/60 pb-6">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <Badge label="Projects Catalog" variant="neutral" />
+                <Badge label={`${projects.length} Completed`} variant="info" />
               </div>
+              <h2 className="text-3xl sm:text-4xl font-pixel tracking-wide">
+                Featured Works & Engineering
+              </h2>
+              <p className="text-sm text-neutral-500 dark:text-neutral-400 max-w-2xl">
+                Click any project card to inspect screenshots, video demos, and full technical architecture.
+              </p>
+            </div>
 
-              {/* Category Filter Pills */}
-              <div className="flex flex-wrap items-center gap-1.5 p-1 rounded-2xl bg-neutral-100 dark:bg-neutral-800/80 border border-neutral-200/60 dark:border-neutral-700/60">
-                {categories.map((cat) => (
+            {/* Category Filter Chips Bar */}
+            <div className="flex flex-wrap items-center gap-2 pt-1">
+              {categories.map((cat) => {
+                const count = cat === 'All' ? projects.length : projects.filter((p) => p.category === cat).length;
+                const isActive = projectCategory === cat;
+                return (
                   <button
                     key={cat}
                     type="button"
                     onClick={() => setProjectCategory(cat)}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all cursor-pointer ${projectCategory === cat
-                      ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 shadow-xs'
-                      : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100'
-                      }`}
+                    className={`group inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-medium transition-all duration-200 cursor-pointer ${
+                      isActive
+                        ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 shadow-sm ring-1 ring-neutral-900/10 dark:ring-white/20'
+                        : 'bg-neutral-100/90 dark:bg-neutral-800/80 text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-200/70 dark:hover:bg-neutral-700/70 border border-neutral-200/70 dark:border-neutral-700/60'
+                    }`}
                   >
-                    {cat}
+                    <span>{cat}</span>
+                    <span
+                      className={`px-1.5 py-0.5 rounded-md text-[10px] font-mono font-semibold transition-colors ${
+                        isActive
+                          ? 'bg-white/20 text-white dark:bg-neutral-950/20 dark:text-neutral-950'
+                          : 'bg-neutral-200/80 dark:bg-neutral-700/70 text-neutral-500 dark:text-neutral-400 group-hover:bg-neutral-300/80 dark:group-hover:bg-neutral-600/80'
+                      }`}
+                    >
+                      {count}
+                    </span>
                   </button>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </div>
 
@@ -1448,6 +1469,21 @@ function App() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* ----------------------------------------------------------------------
+            MINI GAME: SPACE SHOOTER INTERLUDE
+            ---------------------------------------------------------------------- */}
+        <section id="arcade" className="scroll-mt-24 rounded-[2.5rem] bg-neutral-900/40 dark:bg-neutral-950/60 border border-neutral-800/80 p-6 sm:p-8 shadow-sm space-y-4 relative overflow-hidden">
+          <div className="flex items-center justify-between">
+            <div className="space-y-1">
+              <Badge label="Arcade" variant="neutral" />
+              <h2 className="text-2xl sm:text-3xl font-pixel tracking-wide text-neutral-100">
+                Space Break
+              </h2>
+            </div>
+          </div>
+          <SpaceShooter />
         </section>
 
         {/* ----------------------------------------------------------------------

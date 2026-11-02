@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="100%" height="100%">
+  <defs>
+    <linearGradient id="execGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="900" fill="#060911"/>
+
+  <!-- Browser Frame Wrapper -->
+  <g transform="translate(60, 40)">
+    <rect width="1480" height="820" rx="20" fill="#0c111d" stroke="#1e293b" stroke-width="2"/>
+    <rect width="1480" height="52" rx="20" fill="#111827"/>
+    <rect y="40" width="1480" height="12" fill="#111827"/>
+
+    <!-- Window Dots -->
+    <circle cx="28" cy="26" r="6" fill="#ef4444"/>
+    <circle cx="48" cy="26" r="6" fill="#f59e0b"/>
+    <circle cx="68" cy="26" r="6" fill="#10b981"/>
+
+    <rect x="110" y="12" width="600" height="28" rx="8" fill="#080d1a" stroke="#1f293d" stroke-width="1"/>
+    <text x="130" y="30" font-family="'JetBrains Mono', monospace" font-size="12" fill="#38bdf8">http://localhost:8080/ui#sql <tspan fill="#64748b">— SQL Query Runner &amp; Data View</tspan></text>
+
+    <!-- Top Sub-Bar with Tabs -->
+    <g transform="translate(0, 52)">
+      <rect width="1480" height="56" fill="#0e1526" stroke="#1e293b" stroke-width="1"/>
+      <text x="32" y="35" font-family="-apple-system, sans-serif" font-size="18" font-weight="900" fill="#ffffff" letter-spacing="2">DYNAGO</text>
+
+      <!-- Active Tab Indicator on SQL Console -->
+      <g transform="translate(180, 12)">
+        <text x="50" y="22" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#94a3b8">Endpoints</text>
+        <rect x="130" y="0" width="130" height="32" rx="8" fill="#10b981" fill-opacity="0.2" stroke="#10b981" stroke-width="1.2"/>
+        <text x="195" y="21" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#34d399">SQL Console</text>
+        <text x="325" y="22" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#94a3b8">Data Explorer</text>
+        <text x="455" y="22" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#94a3b8">Functions (RPC)</text>
+      </g>
+
+      <!-- Security Lock Pill -->
+      <g transform="translate(1260, 12)">
+        <rect width="180" height="32" rx="16" fill="#38bdf8" fill-opacity="0.12" stroke="#38bdf8" stroke-width="1"/>
+        <text x="90" y="21" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" fill="#38bdf8">ADMIN CONSOLE (ENABLED)</text>
+      </g>
+    </g>
+
+    <!-- Console Main Content -->
+    <g transform="translate(36, 130)">
+      <!-- SQL Input Box -->
+      <g transform="translate(0, 0)">
+        <rect width="1408" height="180" rx="14" fill="#090e18" stroke="#1e293b" stroke-width="1.5"/>
+        <rect width="1408" height="38" rx="14" fill="#0f172a"/>
+        <text x="20" y="24" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff">SQL Query Editor</text>
+        <text x="1380" y="24" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b">PostgreSQL 16 Connection Pool (Active)</text>
+
+        <!-- Syntax Highlighted Query -->
+        <g transform="translate(24, 60)">
+          <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f43f5e">SELECT <tspan fill="#f8fafc">u.id, u.name, u.email, </tspan><tspan fill="#38bdf8">COUNT(</tspan><tspan fill="#f8fafc">o.id</tspan><tspan fill="#38bdf8">)</tspan><tspan fill="#cbd5e1"> AS total_orders, </tspan><tspan fill="#38bdf8">ROUND(SUM(</tspan><tspan fill="#f8fafc">o.total</tspan><tspan fill="#38bdf8">), 2)</tspan><tspan fill="#cbd5e1"> AS lifetime_spent</tspan></text>
+          <text x="0" y="50" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f43f5e">FROM <tspan fill="#f8fafc">users u</tspan></text>
+          <text x="0" y="80" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f43f5e">INNER JOIN <tspan fill="#f8fafc">orders o </tspan><tspan fill="#f43f5e">ON </tspan><tspan fill="#f8fafc">u.id = o.user_id</tspan></text>
+          <text x="0" y="110" font-family="'JetBrains Mono', monospace" font-size="14" fill="#f43f5e">GROUP BY <tspan fill="#f8fafc">u.id, u.name, u.email </tspan><tspan fill="#f43f5e">HAVING SUM(</tspan><tspan fill="#f8fafc">o.total</tspan><tspan fill="#f43f5e">) &gt; </tspan><tspan fill="#f59e0b">250.00 </tspan><tspan fill="#f43f5e">ORDER BY </tspan><tspan fill="#f8fafc">lifetime_spent </tspan><tspan fill="#f43f5e">DESC </tspan><tspan fill="#f43f5e">LIMIT </tspan><tspan fill="#f59e0b">10</tspan><tspan fill="#f8fafc">;</tspan></text>
+        </g>
+      </g>
+
+      <!-- Action Bar & Performance Metrics -->
+      <g transform="translate(0, 195)">
+        <!-- Execute Button -->
+        <g transform="translate(0, 0)">
+          <rect width="165" height="42" rx="10" fill="url(#execGrad)"/>
+          <text x="82" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff">▶ Run Query (Ctrl+↵)</text>
+        </g>
+
+        <!-- CSV Export Button -->
+        <g transform="translate(180, 0)">
+          <rect width="130" height="42" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+          <text x="65" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">⬇ Export CSV</text>
+        </g>
+
+        <!-- Toggle JSON -->
+        <g transform="translate(325, 0)">
+          <rect width="125" height="42" rx="10" fill="#1e293b" stroke="#334155" stroke-width="1.2"/>
+          <text x="62" y="26" text-anchor="middle" font-family="-apple-system, sans-serif" font-size="12" font-weight="600" fill="#cbd5e1">{ } Raw JSON</text>
+        </g>
+
+        <!-- Execution Timer & Metrics Tag -->
+        <g transform="translate(480, 5)">
+          <rect width="360" height="32" rx="16" fill="#080e1a" stroke="#1e293b" stroke-width="1"/>
+          <circle cx="18" cy="16" r="4" fill="#10b981"/>
+          <text x="32" y="20" font-family="'JetBrains Mono', monospace" font-size="11" fill="#34d399">Execution Time: 1.18ms</text>
+          <text x="200" y="20" font-family="'JetBrains Mono', monospace" font-size="11" fill="#94a3b8">• Rows: 5 returned</text>
+        </g>
+      </g>
+
+      <!-- Query Results Data Table -->
+      <g transform="translate(0, 255)">
+        <rect width="1408" height="400" rx="14" fill="#090e18" stroke="#1e293b" stroke-width="1.5"/>
+
+        <!-- Table Header Row -->
+        <rect width="1408" height="44" rx="14" fill="#0f172a"/>
+        <text x="30" y="27" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#38bdf8">id</text>
+        <text x="120" y="27" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#38bdf8">name</text>
+        <text x="420" y="27" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#38bdf8">email</text>
+        <text x="750" y="27" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#38bdf8">total_orders</text>
+        <text x="960" y="27" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#38bdf8">lifetime_spent ($)</text>
+        <text x="1220" y="27" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#38bdf8">status</text>
+
+        <!-- Table Row 1 -->
+        <g transform="translate(0, 44)">
+          <rect width="1408" height="52" fill="#070c16"/>
+          <text x="30" y="32" font-family="'JetBrains Mono', monospace" font-size="13" fill="#f59e0b">1</text>
+          <text x="120" y="32" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Alice Developer</text>
+          <text x="420" y="32" font-family="'JetBrains Mono', monospace" font-size="12" fill="#94a3b8">alice@example.com</text>
+          <text x="750" y="32" font-family="'JetBrains Mono', monospace" font-size="13" fill="#cbd5e1">14</text>
+          <text x="960" y="32" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#34d399">$1,894.20</text>
+          <rect x="1215" y="15" width="80" height="22" rx="11" fill="#10b981" fill-opacity="0.2"/>
+          <text x="1255" y="30" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#34d399">VIP ACTIVE</text>
+        </g>
+
+        <!-- Table Row 2 -->
+        <g transform="translate(0, 96)">
+          <rect width="1408" height="52" fill="#090e18"/>
+          <text x="30" y="32" font-family="'JetBrains Mono', monospace" font-size="13" fill="#f59e0b">4</text>
+          <text x="120" y="32" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Bob Harrison</text>
+          <text x="420" y="32" font-family="'JetBrains Mono', monospace" font-size="12" fill="#94a3b8">bob.h@domain.org</text>
+          <text x="750" y="32" font-family="'JetBrains Mono', monospace" font-size="13" fill="#cbd5e1">9</text>
+          <text x="960" y="32" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#34d399">$1,120.00</text>
+          <rect x="1215" y="15" width="80" height="22" rx="11" fill="#0284c7" fill-opacity="0.2"/>
+          <text x="1255" y="30" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8">ACTIVE</text>
+        </g>
+
+        <!-- Table Row 3 -->
+        <g transform="translate(0, 148)">
+          <rect width="1408" height="52" fill="#070c16"/>
+          <text x="30" y="32" font-family="'JetBrains Mono', monospace" font-size="13" fill="#f59e0b">8</text>
+          <text x="120" y="32" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Carlos Mendoza</text>
+          <text x="420" y="32" font-family="'JetBrains Mono', monospace" font-size="12" fill="#94a3b8">carlos@fintech.io</text>
+          <text x="750" y="32" font-family="'JetBrains Mono', monospace" font-size="13" fill="#cbd5e1">6</text>
+          <text x="960" y="32" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#34d399">$742.50</text>
+          <rect x="1215" y="15" width="80" height="22" rx="11" fill="#0284c7" fill-opacity="0.2"/>
+          <text x="1255" y="30" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8">ACTIVE</text>
+        </g>
+
+        <!-- Table Row 4 -->
+        <g transform="translate(0, 200)">
+          <rect width="1408" height="52" fill="#090e18"/>
+          <text x="30" y="32" font-family="'JetBrains Mono', monospace" font-size="13" fill="#f59e0b">12</text>
+          <text x="120" y="32" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Diana Prince</text>
+          <text x="420" y="32" font-family="'JetBrains Mono', monospace" font-size="12" fill="#94a3b8">diana@enterprise.com</text>
+          <text x="750" y="32" font-family="'JetBrains Mono', monospace" font-size="13" fill="#cbd5e1">3</text>
+          <text x="960" y="32" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#34d399">$480.00</text>
+          <rect x="1215" y="15" width="80" height="22" rx="11" fill="#0284c7" fill-opacity="0.2"/>
+          <text x="1255" y="30" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8">ACTIVE</text>
+        </g>
+
+        <!-- Table Row 5 -->
+        <g transform="translate(0, 252)">
+          <rect width="1408" height="52" fill="#070c16"/>
+          <text x="30" y="32" font-family="'JetBrains Mono', monospace" font-size="13" fill="#f59e0b">15</text>
+          <text x="120" y="32" font-family="-apple-system, sans-serif" font-size="13" font-weight="600" fill="#ffffff">Evan Wright</text>
+          <text x="420" y="32" font-family="'JetBrains Mono', monospace" font-size="12" fill="#94a3b8">evan@wright.dev</text>
+          <text x="750" y="32" font-family="'JetBrains Mono', monospace" font-size="13" fill="#cbd5e1">2</text>
+          <text x="960" y="32" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#34d399">$310.25</text>
+          <rect x="1215" y="15" width="80" height="22" rx="11" fill="#0284c7" fill-opacity="0.2"/>
+          <text x="1255" y="30" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" fill="#38bdf8">ACTIVE</text>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

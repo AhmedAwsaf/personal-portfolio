@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAppTheme } from '../context/ThemeContext';
 import { Sun, Moon, Menu, X } from 'lucide-react';
+import { ShipSprite } from './SpaceShooter';
 
 export const Navbar = ({ isStuck = false, nameProgress = 0 }) => {
   const { toggleTheme, isDark } = useAppTheme();
@@ -68,17 +69,32 @@ export const Navbar = ({ isStuck = false, nameProgress = 0 }) => {
           {/* Blob 1: Long blob for Nav Items */}
           <div className="hidden md:flex items-center gap-1 acrylic-blob rounded-full p-1.5">
             {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.href}
-                onClick={() => setActiveTab(link.id)}
-                className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 no-underline whitespace-nowrap ${activeTab === link.id
-                  ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 shadow-sm'
-                  : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/60 dark:hover:bg-neutral-800/60'
-                  }`}
-              >
-                {link.label}
-              </a>
+              <React.Fragment key={link.id}>
+                <a
+                  href={link.href}
+                  onClick={() => setActiveTab(link.id)}
+                  className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 no-underline whitespace-nowrap ${activeTab === link.id
+                    ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 shadow-sm'
+                    : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/60 dark:hover:bg-neutral-800/60'
+                    }`}
+                >
+                  {link.label}
+                </a>
+                {link.id === 'skills' && (
+                  <a
+                    href="#arcade"
+                    onClick={() => setActiveTab('arcade')}
+                    aria-label="Arcade"
+                    title="Play Space Break"
+                    className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center transition-all duration-200 no-underline hover:scale-110 active:scale-95 ${activeTab === 'arcade'
+                      ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950 shadow-sm'
+                      : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:bg-neutral-100/60 dark:hover:bg-neutral-800/60'
+                      }`}
+                  >
+                    <ShipSprite size={14} />
+                  </a>
+                )}
+              </React.Fragment>
             ))}
           </div>
 
@@ -113,20 +129,39 @@ export const Navbar = ({ isStuck = false, nameProgress = 0 }) => {
         <div className="md:hidden px-4 pt-3 pb-5 mt-2 mx-4 rounded-2xl acrylic-blob space-y-2">
           <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
-              <a
-                key={link.id}
-                href={link.href}
-                onClick={() => {
-                  setActiveTab(link.id);
-                  setMobileMenuOpen(false);
-                }}
-                className={`px-3.5 py-2 rounded-xl text-sm font-medium transition-colors no-underline ${activeTab === link.id
-                  ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950'
-                  : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800'
-                  }`}
-              >
-                {link.label}
-              </a>
+              <React.Fragment key={link.id}>
+                <a
+                  href={link.href}
+                  onClick={() => {
+                    setActiveTab(link.id);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`px-3.5 py-2 rounded-xl text-sm font-medium transition-colors no-underline ${activeTab === link.id
+                    ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950'
+                    : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800'
+                    }`}
+                >
+                  {link.label}
+                </a>
+                {link.id === 'skills' && (
+                  <a
+                    href="#arcade"
+                    onClick={() => {
+                      setActiveTab('arcade');
+                      setMobileMenuOpen(false);
+                    }}
+                    className={`px-3.5 py-2 rounded-xl text-sm font-medium transition-colors no-underline flex items-center gap-2.5 ${activeTab === 'arcade'
+                      ? 'bg-neutral-900 text-white dark:bg-white dark:text-neutral-950'
+                      : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800'
+                      }`}
+                  >
+                    <span className="w-6 h-6 rounded-full flex items-center justify-center bg-neutral-200/60 dark:bg-neutral-800/80">
+                      <ShipSprite size={13} />
+                    </span>
+                    <span>Arcade</span>
+                  </a>
+                )}
+              </React.Fragment>
             ))}
           </div>
         </div>
